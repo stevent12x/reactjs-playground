@@ -2,12 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
+const App = () => {
+    return (
       React.createElement (
-          "div",
+          'div',
           null,
-          'Hello React',
+          'Hello React ',
+          React.createElement('input', null),
+          React.createElement(
+              'pre', null, new Date().toLocaleTimeString()
+          )
       )
   )
 }
