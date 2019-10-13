@@ -16,4 +16,4 @@ const render = () => {
     );
 }
 
-export default render;
+export {render};
