@@ -13,7 +13,7 @@ code {
     monospace;
 }
 
-#root > div {
+#root > div, #mountNode {
   border: 1px solid salmon;
   margin: 1em;
   padding: 1em;
