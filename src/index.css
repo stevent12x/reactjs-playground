@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  margin: 1em;
+  padding: 1em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -13,14 +14,28 @@ code {
     monospace;
 }
 
-#root > div, #mountNode {
+
+div {
+  padding: 1rem;
+}
+
+#root {
+  margin: 1rem;
   border: 1px solid salmon;
-  margin: 1em;
-  padding: 1em;
+}
+
+#mountNode {
+  margin: 1rem;
+  border: 1px solid rebeccapurple;
 }
 
 #root input {
   display: block;
-  margin: 1rem 0;
-  border: 1px solid saddlebrown;
+   margin-top: 1rem;
+   border: 1px solid saddlebrown;
+ }
+
+#random {
+  margin: 1rem;
+  border: 1px solid firebrick;
 }
