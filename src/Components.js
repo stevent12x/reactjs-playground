@@ -20,6 +20,7 @@ const RandomValue = () => (
 );
 export {RandomValue};
 
+// This button will auto-increment with each press //
 const Button = () => {
 	const [count, setCount] = React.useState(0);
 
