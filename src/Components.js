@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
 
@@ -20,16 +20,34 @@ const RandomValue = () => (
 );
 export {RandomValue};
 
-// This button will auto-increment with each press //
-const Button = () => {
-	const [count, setCount] = React.useState(0);
-
+const Button = ({clickAction}) => {
 	return (
-		<button onClick={() => setCount(count + 1)}>
-			{count}
+		<button onClick={clickAction}>
+			+1
 		</button>
 	);
 };
-export {Button};
+const Display = ({content}) => (
+	<pre>
+	You've clicked the button{' ' + content + ' '}times!
+	</pre>
+);
+// This function takes the following two and wraps them in a single function that can be called and updated  //
+// while simultaneously referencing the other two... //
+// Very cool //
+const CountManager = () => {
+	const [count, setCount] = useState(0);
+	const incrementCounter = () => {
+		setCount(count+1);
+	}
+	return (
+		<>
+		<Button clickAction={incrementCounter}/>
+		<Display content={count}/>
+		</>
+	);
+};
+export {CountManager};
+
 
 
