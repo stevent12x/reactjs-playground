@@ -34,15 +34,28 @@ const CountManager = () => {
 		setCount(count + incrementValue);
 	}
 	return (
-		<>
-			<Button clickAction={incrementCounter} clickValue={1}/>
-			<Button clickAction={incrementCounter} clickValue={5}/>
-			<Button clickAction={incrementCounter} clickValue={10}/>
-			<Display content={count}/>
-		</>
+			<>
+				<Button clickAction={incrementCounter} clickValue={1}/>
+				<Button clickAction={incrementCounter} clickValue={5}/>
+				<Button clickAction={incrementCounter} clickValue={10}/>
+				<Display content={count}/>
+			</>
 	);
 };
 export {CountManager};
 
+const Like = () => {
+	const {count, setCount} = useState(0);
+	const incrementLikes = (incrementLikes) => {
+		setCount(count + incrementLikes);
+	}
+	return (
+			<>
+				<Button clickAction={incrementLikes} clickValue={1}/>
+				<Display content={count}/>
+			</>
+	);
+}
+export {Like};
 
 
